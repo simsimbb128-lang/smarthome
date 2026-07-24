@@ -270,3 +270,149 @@ transform:translateY(-4px);
     }
 
 }
+/* ===== About Section ===== */
+.about{
+    padding:100px 10%;
+    background:#07111D;
+    text-align:center;
+}
+
+.about h2{
+    color:#64B5FF;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    color:#d9e6f2;
+    line-height:1.8;
+    margin-bottom:50px;
+}
+
+.about-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(100,181,255,.25);
+}
+
+/* ===== Services ===== */
+
+.services{
+    padding:100px 10%;
+    background:#0b1220;
+    text-align:center;
+}
+
+.services h2{
+    color:#64B5FF;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.service-box{
+    background:#132133;
+    padding:35px;
+    border-radius:18px;
+    transition:.4s;
+    font-size:20px;
+}
+
+.service-box:hover{
+    background:#64B5FF;
+    color:#07111D;
+    transform:scale(1.05);
+}
+
+/* ===== Footer ===== */
+
+footer{
+    background:#050b15;
+    padding:25px;
+    text-align:center;
+    color:#bbb;
+}
+/* Mobile Menu */
+
+.menu-btn{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:white;
+}
+
+@media(max-width:768px){
+
+.menu-btn{
+    display:block;
+}
+
+nav ul{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:80px;
+    right:20px;
+    width:220px;
+    background:#07111D;
+    border-radius:12px;
+    padding:20px;
+}
+
+nav ul.active{
+    display:flex;
+}
+
+}
+/* زر القائمة للجوال */
+.menu-btn{
+    display:none;
+    font-size:32px;
+    color:white;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    nav ul{
+        display:none;
+        position:absolute;
+        top:80px;
+        right:20px;
+        width:220px;
+        background:#07111d;
+        border-radius:12px;
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+}
