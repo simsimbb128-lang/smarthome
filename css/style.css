@@ -60,11 +60,11 @@ width:100%;
 
 display:flex;
 
-justify-content:space-between;
+justify-content:flex-start;
 
 align-items:center;
 
-padding:25px 80px;
+padding:25px 40px;
 
 z-index:100;
 
@@ -357,39 +357,54 @@ footer{
 
 .menu-btn{
     display:none;
-    font-size:32px;
+    font-size:25px;
     cursor:pointer;
     color:white;
 }
 
-@media(max-width:768px){
-
 .menu-btn{
     display:block;
+    margin-left:auto;
+    padding:8px;
+    cursor:pointer;
+    font-size:30px;
+    color:white;
 }
 
-nav ul{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:80px;
-    right:20px;
-    width:220px;
-    background:#07111D;
-    border-radius:12px;
-    padding:20px;
+#lang-toggle{
+    margin-right:auto;
+    padding:8px 16px;
+    border:none;
+    border-radius:20px;
+    background:#00bcd4;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
 }
 
-nav ul.active{
-    display:flex;
-}
+@media (max-width:768px){
+    nav ul{
+        display:none;
+        position:absolute;
+        top:80px;
+        right:20px;
+        width:220px;
+        background:#07111D;
+        border-radius:12px;
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+    }
 
+    nav ul.active{
+        display:flex;
+    }
 }
 /* زر القائمة للجوال */
 .menu-btn{
-    display:none;
-    font-size:32px;
-    color:white;
+    display:block;
+    margin-right:25px; 
+    padding:8px; 
     cursor:pointer;
 }
 
@@ -403,7 +418,7 @@ nav ul.active{
         display:none;
         position:absolute;
         top:80px;
-        right:20px;
+        right:35px;
         width:220px;
         background:#07111d;
         border-radius:12px;
@@ -415,4 +430,35 @@ nav ul.active{
     nav ul.active{
         display:flex;
     }
+}
+#lang-toggle {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #00bcd4;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 25px 40px;
+    z-index: 100;
+}
+
+#lang-toggle{
+    margin-right: auto;
+}
+
+.menu-btn{
+    margin-left: auto;
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
 }

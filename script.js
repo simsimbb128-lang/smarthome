@@ -27,3 +27,36 @@ menuBtn.addEventListener("click",()=>{
 menu.classList.toggle("active");
 
 });
+const langBtn = document.getElementById("lang-toggle");
+
+let isArabic = false;
+
+langBtn.addEventListener("click", () => {
+    if (!isArabic) {
+        document.documentElement.lang = "ar";
+        document.documentElement.dir = "rtl";
+
+        document.querySelector('a[href="#"]').textContent = "الرئيسية";
+        document.querySelector('a[href="#services"]').textContent = "الخدمات";
+        document.querySelector('a[href="#gallery"]').textContent = "المعرض";
+        document.querySelector('a[href="#contact"]').textContent = "تواصل معنا";
+
+        document.querySelector(".logo").textContent = "سمارت هوم";
+
+        langBtn.textContent = "English";
+        isArabic = true;
+    } else {
+        document.documentElement.lang = "en";
+        document.documentElement.dir = "ltr";
+
+        document.querySelector('a[href="#"]').textContent = "Home";
+        document.querySelector('a[href="#services"]').textContent = "Services";
+        document.querySelector('a[href="#gallery"]').textContent = "Gallery";
+        document.querySelector('a[href="#contact"]').textContent = "Contact";
+
+        document.querySelector(".logo").textContent = "SmartHome";
+
+        langBtn.textContent = "العربية";
+        isArabic = false;
+    }
+});
